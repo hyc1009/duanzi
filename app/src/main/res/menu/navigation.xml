@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home"
+        android:icon="@mipmap/ic_launcher"
+        android:title="首页"/>
+    <item android:id="@+id/show"
+        android:icon="@mipmap/ic_launcher"
+        android:title="段友秀"/>
+    <item android:id="@+id/discovery"
+        android:icon="@mipmap/ic_launcher"
+        android:title="发现"/>
+    <item android:id="@+id/mine"
+        android:icon="@mipmap/ic_launcher"
+        android:title="我的"/>
+</menu>

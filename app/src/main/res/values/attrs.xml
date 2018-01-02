@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TabView">
+        <attr name="tab_textViewSelectColor" format="reference|color"/>
+        <attr name="tab_textViewUnselectColor" format="reference|color"/>
+        <attr name="tab_tabviewBackgroundColor" format="reference|color"/>
+        <attr name="tab_imageviewTextviewMargin" format="dimension"/>
+        <attr name="tab_imageviewTopMargin" format="dimension"/>
+        <attr name="tabviewHeight" format="dimension"/>
+        <attr name="tab_textviewSize" format="dimension"/>
+        <attr name="tab_imageviewWidth" format="dimension"/>
+        <attr name="tab_imageviewHeight" format="dimension"/>
+        <attr name="tabview_gravity">
+            <flag name="top" value="0x30"/>
+            <flag name="bottom" value="0x50"/>
+            <flag name="left" value="0x03"/>
+            <flag name="right" value="0x05"/>
+        </attr>
+        <attr name="tabview_defaultposition" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="UltraViewPager">
+        <attr name="upv_autoscroll" format="integer" />
+        <attr name="upv_infiniteloop" format="boolean" />
+        <attr name="upv_ratio" format="float" />
+        <attr name="upv_scrollmode" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="upv_disablescroll" format="enum">
+            <enum name="none" value="0" />
+            <enum name="backward" value="1" />
+            <enum name="forward" value="2" />
+        </attr>
+        <attr name="upv_multiscreen" format="boolean" />
+        <attr name="upv_automeasure" format="boolean" />
+        <attr name="upv_itemratio" format="float" />
+    </declare-styleable>
+
+//倒计时属性
+    <declare-styleable name="CountDownView"><attr format="dimension" name="cd_circle_radius"/><attr format="dimension" name="cd_arc_width"/><attr format="color" name="cd_arc_color"/><attr format="color" name="cd_bg_color"/><attr format="color" name="cd_text_color"/><attr format="dimension" name="cd_text_size"/><attr format="integer" name="cd_animator_time"/><attr format="string" name="cd_animator_time_unit"/><attr format="enum" name="cd_retreat_type">
+
+        <enum name="forward" value="1"/>
+
+        <enum name="back" value="2"/>
+    </attr><attr format="enum" name="cd_location">
+        <enum name="left" value="1"/>
+        <enum name="top" value="2"/>
+        <enum name="right" value="3"/>
+        <enum name="bottom" value="4"/>
+    </attr></declare-styleable>
+    <string name="app_name">YCCountDownViewLib</string>
+</resources>

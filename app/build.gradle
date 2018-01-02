@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.duanzi.he.duanzi"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        releaseConfig {
+            storeFile file("D:\\firefoxdownload\\heyunchao.jks")
+//            ("D://project//ExpressAndroid//xx.keystore")
+            storePassword
+            if (System.console() != null)
+                System.console().readLine("\nKeystore password: ")
+            keyAlias "MyApp"
+            keyPassword
+            if (System.console() != null)
+                System.console().readLine("\nKey password: ")
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+
+        repositories {
+            flatDir {
+                dirs 'libs'
+            }
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    testCompile 'junit:junit:4.12'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjava2Version"
+    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit2Version"
+    compile "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofit2Version"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofit2Version"
+    compile "com.google.code.gson:gson: $rootProject.ext.gsonVersion"
+    compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile 'com.google.auto:auto-common:0.6'
+    compile 'com.google.auto.service:auto-service:1.0-rc2'
+    compile 'com.squareup:javapoet:1.7.0'
+    compile project(':mlib')
+    //    compile project(':apt')
+    //    compile project(':annotation')
+    compile files('libs/InterceptorHelper.jar')
+}
+
+/*compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_7
+    targetCompatibility JavaVersion.VERSION_1_7
+}*/

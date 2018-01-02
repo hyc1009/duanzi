@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+<com.duanzi.he.duanzi.view.tab.TabView
+    android:id="@+id/tabview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:tab_textViewSelectColor="#f00"
+    app:tab_tabviewBackgroundColor="#c1bfbd"
+    app:tab_textViewUnselectColor="#000"
+    app:tab_imageviewTextviewMargin="2dp"
+    app:tab_imageviewWidth="20dp"
+    app:tab_imageviewHeight="20dp"
+    app:tab_textviewSize="3sp"
+    app:tab_imageviewTopMargin="10dp"
+    >
+
+</com.duanzi.he.duanzi.view.tab.TabView>
+
+</layout>

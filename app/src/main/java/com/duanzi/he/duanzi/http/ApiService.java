@@ -21,7 +21,7 @@ import retrofit2.http.Query;
 
 public interface ApiService {
     //获取所有的兴趣标签列表
-    @POST("tag/gettaglists")
+    @POST("")
     @FormUrlEncoded
     Flowable<UserLabelBean> getLaleList(@Field("uid") String uid, @Field("id_type") int type);
     //获取快递信息
